@@ -1,57 +1,53 @@
 # Rock Paper Scissors
-# A code file structure:
-# A line that starts with "#"  is a comment line (it will not be interpreted)
-"""
-If you want to comment multiple lines, start and finish with three (3) double quotes (")
-As you can see, this line is also a comment.
+from random import randrange
 
-"""
-"""
-I am a comment
+print("Welcome to Rock, Paper, Scissors")
+game_chars = {1: {"Rock": "Its a tie", "Paper": "You lost", "Scissors": "You win"},
+              2: {"Paper": "Its a tie", "Scissors": "You lost", "Rock": "You win"},
+              3: {"Scissors": "Its a tie", "Rock": "You lost", "Paper": "You win"}}
+print(f"\nGame rules:")
+for x in game_chars:
+    print(f"{list(game_chars[x].keys())[0]} --V/S-- {list(game_chars[x].keys())[2]}-------->{list(game_chars[x].keys())[0]} Wins!")
 
+game_value = True
+username = str(input("Please Enter Your Name: ")).capitalize()
 
-"""
-# ----------------------------------------------------------------------------------------------------------------------
-# Here you include all of your package imports (like random and time packages we've discussed about)
-# ----------------------------------------------------------------------------------------------------------------------
-import random
+game = input(f"Hello {username} Do you wanna play? Y/N\n").capitalize()
+if game == "Y":
+    while game_value is True:
+        print("Pick your Material:\n")
 
-# ----------------------------------------------------------------------------------------------------------------------
-# Here you will write all of the functions (for later stages of the course
-# ----------------------------------------------------------------------------------------------------------------------
+        for x in game_chars:
+            print(f"For --{list(game_chars[x].keys())[0]}-- Press {x}")
 
-# ----------------------------------------------------------------------------------------------------------------------
-# Here you write code :)
-# ----------------------------------------------------------------------------------------------------------------------
-"""
-I'll give you the text inputs for this program, to make your lives a little easier.
-In addition, and to make it simple to you, the input from the user will be an integer:
-1 for ROCK
-2 for PAPER
-3 for SCISSORS
-A text input describing the operation is unacceptable and will cost you with points.
+        print("Make your choice:\n")
 
-A quick reminder of the rules:
+        jonny_number = False
+        player_input = input("Choose your number: \n")
+        while jonny_number is False:
+            if player_input.isdigit():
+                player_input = int(player_input)
+                if player_input in range(1, 4):
+                    jonny_number = True
+                else:
+                    player_input = input("Wrong Key. Enter a valid choice:\n")
+            else:
+                player_input = input("Wrong Key. Enter a valid choice:\n")
+                continue
 
-ROCK(1) vs SCISSORS(3)   --> ROCK(1) wins
-SCISSORS(3) vs PAPER(2)  --> SCISSORS(3) win
-PAPER(2) vs ROCK(1)      --> PAPER(2) wins
+        print("Computer Turn...\n")
+        pc_number = randrange(1, 4)
+        pc_number = list(game_chars[pc_number].keys())[0]
+        print(f"Your choice is: {list(game_chars[player_input].keys())[0]}\nComputer Choice is: {pc_number}")
+        print(list(game_chars[player_input].keys())[0], "V/S", pc_number)
+        print(f"{game_chars[player_input][pc_number]} , {username}")
+        continue_game = input("Play again? Y/N").capitalize()
+        if continue_game == "Y":
+            game_value is True
+        else:
+            print("Adios")
+            exit()
 
-DO NOT ADD EXTRA OPTIONS (No lizard, no Spock.)
-"""
-
-# print the instructions for the user to see:
-print("GAME RULES: \n"
-      "ROCK(1) vs SCISSORS(3)   --> ROCK(1) wins\n"
-      "SCISSORS(3) vs PAPER(2)  --> SCISSORS(3) win\n"
-      "PAPER(2) vs ROCK(1)      --> PAPER(2) wins)\n")
-
-# The game will run in a WHILE loop.
-# The loop is infinite, and only the user has the power to stop it (when they say they don't want to play anymore)
-while True:
-    """
-      This is the game's heart. You'll need to think and use everything we've learned so far to make this game work.
-      Remember Python's rules ( the ':' after a statement, the indentation with loops and statements..)
-      
-      """
-    pass
+else:
+    print("Adios amigo")
+    exit()

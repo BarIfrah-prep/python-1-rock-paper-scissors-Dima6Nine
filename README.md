@@ -1,22 +1,41 @@
 # Rock Paper Scissors!
-# Hi and welcome to your first assignment!
-Here, your goal is to create a simple "Rock, Paper, Scissors" game, with all the knowledge youv'e got so far.\
-This is the **README** file. a **README** file is a text, or as you can see here, an "MD" file,\
-where all of your program information (how to run, what is the input/output, and everything you think is nessecary for the understanding of your code).\
-I'll give you a template this time, but from here on you'll need to manage this by yourselves. Good luck!
+# Hi and welcome to my first assignment!
+Here is the first assignment of the course.
 
-# (Insert your project name here)
-say something about the assignement, what is this code doing, what is this code's goal..
-  **REPLACE THE ABOVE LINE OBVIOUSLY**
+# (Rock, Paper, Scissors Game)
+The code is a simple dictionary where every element has its own dictionary value/
+with different result for each element.
+After the user choices his option (1,2,3) the code converts the nested dictionary to list and gets/
+The first element according to the instructions. if the user didn't pick the right option/
+There is a While loop which check for str and int in range until the user makes the right choice./
+After that the random randrange function is picking for the pc the figure number the same way/
+as the users one and saves it inside. and at last we take the users input and the pc value/
+to get the corresponding result for the users choice from the dict value.
 
-## Who's submitting?
-NAME: email address.
-NEVER! Upload your credentials to github (ID number etc..)
+## Submitter:
+NAME: dimaku@edu.hac.ac.il
 
-## Code input\output\ how to run
-What is the input of this code?\
-What is the output of this code?\
-What do I need to do to run it?\
-Give one or two examples of input and output.
+## Code input\output and how to run
+First you are asked for your name and then you are asked if you want to play\
+The game takes only a "Y" as an answer (not case-sensitive), anything else will close the game\ 
+After those steps the game will introduce you to your choices and which number corresponds them (1-3)\
+Then you input the desired option and the pc choice's his figure randomly\
+And you will see the result if you won/lost or tie according to the game rules.
+The game will ask you in the end if you want to play again on which you answer by Y/N
+Good luck and have fun.
 
-### This is it! Your assignement instructions are attached in the repository. Good luck!
+Examples: 
+-Computer asks:-\
+For --Rock-- Press 1\
+For --Paper-- Press 2\
+For --Scissors-- Press 3\
+Make your choice:\
+Your choices for input are: 1,2,3 (anything else won't work don't try)
+
+On end result\
+-Computer asks:-\
+Play Again Y/N?\
+If you want to play again you input "y" if not just input any other key.
+
+
+### This is it! Good luck!
