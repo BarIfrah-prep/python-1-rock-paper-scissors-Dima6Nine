@@ -3,13 +3,13 @@
 Here is the first assignment of the course.
 
 # (Rock, Paper, Scissors Game)
-The code is a simple dictionary where every element has its own dictionary value/
+The code is a simple dictionary where every element has its own dictionary value\
 with different result for each element.
-After the user choices his option (1,2,3) the code converts the nested dictionary to list and gets/
-The first element according to the instructions. if the user didn't pick the right option/
-There is a While loop which check for str and int in range until the user makes the right choice./
-After that the random randrange function is picking for the pc the figure number the same way/
-as the users one and saves it inside. and at last we take the users input and the pc value/
+After the user choices his option (1,2,3) the code converts the nested dictionary to list and gets\
+The first element according to the instructions. if the user didn't pick the right option\
+There is a While loop which check for str and int in range until the user makes the right choice.\
+After that the random randrange function is picking for the pc the figure number the same way\
+as the users one and saves it inside. and at last we take the users input and the pc value\
 to get the corresponding result for the users choice from the dict value.
 
 ## Submitter:
