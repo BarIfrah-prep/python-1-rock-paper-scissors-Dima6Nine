@@ -21,7 +21,7 @@ if game == "Y":
     while game_value is True:
 
         jonny_number = False
-        player_input = input("Choose your number: \n")
+        player_input = input("Choose your player: \n")
         while jonny_number is False:
             if player_input.isdigit():
                 player_input = int(player_input)
