@@ -37,7 +37,7 @@ if game == "Y":
         pc_number = randrange(1, 4)
         pc_number = list(game_chars[pc_number].keys())[0]
         print(f"Your choice is: {list(game_chars[player_input].keys())[0]}\nComputer Choice is: {pc_number}")
-        print(list(game_chars[player_input].keys())[0], "V/S", pc_number)
+        print(list(game_chars[player_input].keys())[0], "V//S", pc_number)
         print(f"{game_chars[player_input][pc_number]} , {username}")
         if list(game_chars[player_input].keys())[0] == pc_number:
             continue
