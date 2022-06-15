@@ -7,20 +7,18 @@ game_chars = {1: {"Rock": "Its a tie", "Paper": "You lost", "Scissors": "You win
               3: {"Scissors": "Its a tie", "Rock": "You lost", "Paper": "You win"}}
 print(f"\nGame rules:")
 for x in game_chars:
-    print(f"{list(game_chars[x].keys())[0]} --V/S-- {list(game_chars[x].keys())[2]}-------->{list(game_chars[x].keys())[0]} Wins!")
+    print(f"{list(game_chars[x].keys())[0]}({x}) --V/S-- {list(game_chars[x].keys())[2]}-------->"
+          f"{list(game_chars[x].keys())[0]}({x}) Wins!")
 
 game_value = True
 username = str(input("Please Enter Your Name: ")).capitalize()
 
 game = input(f"Hello {username} Do you wanna play? Y/N\n").capitalize()
+
+for x in game_chars:
+    print(f"For --{list(game_chars[x].keys())[0]}-- Press {x}")
 if game == "Y":
     while game_value is True:
-        print("Pick your Material:\n")
-
-        for x in game_chars:
-            print(f"For --{list(game_chars[x].keys())[0]}-- Press {x}")
-
-        print("Make your choice:\n")
 
         jonny_number = False
         player_input = input("Choose your number: \n")
@@ -41,13 +39,16 @@ if game == "Y":
         print(f"Your choice is: {list(game_chars[player_input].keys())[0]}\nComputer Choice is: {pc_number}")
         print(list(game_chars[player_input].keys())[0], "V/S", pc_number)
         print(f"{game_chars[player_input][pc_number]} , {username}")
-        continue_game = input("Play again? Y/N").capitalize()
-        if continue_game == "Y":
-            game_value is True
+        if list(game_chars[player_input].keys())[0] == pc_number:
+            continue
         else:
-            print("Adios")
-            exit()
+            continue_game = input("Play again? Y/N").capitalize()
+            if continue_game == "Y":
+                game_value is True
+            else:
+                print("\nAdios")
+                exit()
 
 else:
-    print("Adios amigo")
+    print("\nAdios amigo")
     exit()
